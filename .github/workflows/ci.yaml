@@ -22,18 +22,18 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-- name: NPM Install
-  run: npm install
-- name: NPM Install Angular
-  run: npm install -g @angular/cli > /dev/null
-- name: Lint
-  run: npm run lint
+      - name: NPM Install
+        run: npm install
+      - name: NPM Install Angular
+        run: npm install -g @angular/cli > /dev/null
+      - name: Lint
+        run: npm run lint
 
-  - name: Deploy to my EC2 instance
-    uses: easingthemes/ssh-deploy@v2.1.5
-    with:
-      SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY}}
-      SOURCE: "dist/trad_frontend/"
-      REMOTE_HOST: "18.192.215.244"
-      REMOTE_USER: "ubuntu"
-      TARGET: "/var/www/html/dist/"
+      - name: Deploy to my EC2 instance
+        uses: easingthemes/ssh-deploy@v2.1.5
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY}}
+          SOURCE: "dist/trad_frontend/"
+          REMOTE_HOST: "18.192.215.244"
+          REMOTE_USER: "ubuntu"
+          TARGET: "/var/www/html/dist/"
