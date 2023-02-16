@@ -26,8 +26,8 @@ jobs:
         run: npm install
       - name: NPM Install Angular
         run: npm install -g @angular/cli > /dev/null
-      - name: Lint
-        run: npm run lint
+      - name: NPM build Angular Production
+        run: npm run build:prod
 
       - name: Deploy to my EC2 instance
         uses: easingthemes/ssh-deploy@v2.1.5
