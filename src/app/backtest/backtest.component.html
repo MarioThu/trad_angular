@@ -1,0 +1,48 @@
+<div class="input">
+    <div class="select_label">
+        <label >Script</label>
+        <mat-select class="select">
+            <mat-option>
+    
+            </mat-option>
+        </mat-select >
+    </div>
+    <div class="select_label">
+    <label>Market</label>
+    <mat-select class="select">
+        <mat-option>
+
+        </mat-option>
+    </mat-select >
+    </div>
+    <div class="select_label">
+    <label>Stocks/Coin</label>
+    <mat-select color="black" class="select">
+        <mat-option  *ngFor="let stock of stocks"  value={{stock}}>{{stock}}</mat-option>
+    </mat-select >
+    </div>
+    <div class="select_label">
+    <label>Start</label>
+    <mat-select class="select">
+        <mat-option>
+
+        </mat-option>
+    </mat-select>
+</div>
+<div class="select_label">
+    <label>End</label>
+    <mat-select class="select">
+        <mat-option>
+
+        </mat-option>
+    </mat-select>
+</div>
+<div class="select_label">
+    <label>Timeframe</label>
+    <mat-select class="select">
+        <mat-option>
+
+        </mat-option>
+    </mat-select>
+    
+</div>

@@ -1,0 +1,32 @@
+.sidenav-container {
+  height: 100%;
+  background-color: rgb(38, 38, 62);
+  color:white  !important;
+}
+
+.sidenav {
+  width: 200px;
+  background-color: rgb(11, 11, 29);
+  color:white  !important;
+}
+
+.list {
+  color:white  !important;
+
+}
+.list:hover{
+  background-color: white;
+  color: black ;
+}
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+::ng-deep .mdc-list-item__primary-text {
+   color: white !important;  
+}
+::ng-deep .mdc-list-item__primary-text:hover {
+  color: black !important;  
+}
+

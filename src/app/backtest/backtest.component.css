@@ -1,0 +1,26 @@
+.select{
+    background-color: white;
+    width:30%;
+    padding:10px;
+    
+}
+ng::deep mat-select{
+    color:black !important;
+}
+.input{
+    width:20%;
+    padding:1%;
+    margin:1%;
+    background-color: #3f51b5;
+    height: 50%;
+    
+}
+::ng-deep label{
+    padding:10px;
+    width:40% !important;
+}
+.select_label{
+    margin-top: 20px;
+    width: 100%;
+    justify-content: right;
+}
