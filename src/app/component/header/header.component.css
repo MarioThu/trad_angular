@@ -1,19 +1,9 @@
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 16px;
-    background-color: #333;
-    color: #fff;
-  }
-  
-  .logo {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  nav a {
-    color: #fff;
-    margin-left: 16px;
-    text-decoration: none;
-  }
+
+  .example-container {
+    position: absolute;
+    top: 5vh;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgb(9, 11, 47);
+    }

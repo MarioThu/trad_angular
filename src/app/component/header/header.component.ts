@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  
+  isShowen:boolean=false;
+  constructor(){
+
+  }
+  toggle(){
+    this.isShowen=!this.isShowen;
+  }
 }
