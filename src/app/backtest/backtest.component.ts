@@ -7,7 +7,7 @@ import { StockTickerService } from '../stock-ticker.service';
 })
 export class BacktestComponent {
   stocks=[
-    "AAPl",
+    "AAPL",
     "AMZN",
     "NVDA"
   ]
