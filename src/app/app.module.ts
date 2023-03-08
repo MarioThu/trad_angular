@@ -36,6 +36,8 @@ import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { LayoutModule } from '@angular/cdk/layout';
 import { BacktestComponent } from './backtest/backtest.component';
+import { StockTickerService } from './stock-ticker.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -45,6 +47,7 @@ import { BacktestComponent } from './backtest/backtest.component';
     BacktestComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     MatSelectModule,
@@ -80,7 +83,7 @@ import { BacktestComponent } from './backtest/backtest.component';
     MatPaginatorModule,
     LayoutModule
   ],
-  providers: [],
+  providers: [StockTickerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
