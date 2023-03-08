@@ -6,9 +6,11 @@ import { Backtest } from './backtest/backtest.component';
   providedIn: 'root'
 })
 export class StockTickerService {
-  url = "http://18.192.215.244:5000"
+  url = "http://18.192.215.244:5000";
+  
   constructor(private httpclient: HttpClient) { }
   public startBacktest(backtest: Backtest):Observable<object>{  
-    return this.httpclient.post(`${this.url}/startBacktest`,backtest)
+    console.log("test");
+    return this.httpclient.get(`${this.url}/startBacktest`)
   }
 }
