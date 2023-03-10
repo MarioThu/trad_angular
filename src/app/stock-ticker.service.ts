@@ -11,6 +11,6 @@ export class StockTickerService {
   constructor(private httpclient: HttpClient) { }
   public startBacktest(backtest: Backtest):Observable<object>{  
     console.log("test");
-    return this.httpclient.get("http://18.192.214.203:5000/startBacktest")
+    return this.httpclient.get("http://localhost:5000/startBacktest")
   }
 }
