@@ -19,7 +19,9 @@ export class BacktestComponent {
   }
   startBacktest(){
     const b:Backtest = {p:"test"};
-    this.stockService.startBacktest(b)
+    this.stockService.startBacktest(b).subscribe(
+      () => {console.log(b)}
+    )
   }
 }
 export interface Backtest{
