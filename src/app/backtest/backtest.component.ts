@@ -25,7 +25,6 @@ export class BacktestComponent implements OnInit{
   ){
   }
   ngOnInit() {
-    this.getAllBacktests();
   }
  
   addBacktest(){
