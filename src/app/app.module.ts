@@ -40,6 +40,7 @@ import { StockTickerService } from './stock-ticker.service';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CustomTableComponent } from './custom-table/custom-table.component';
+import { AgGridModule } from 'ag-grid-angular';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { CustomTableComponent } from './custom-table/custom-table.component';
     CustomTableComponent
   ],
   imports: [
+    AgGridModule,
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
