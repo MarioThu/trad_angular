@@ -12,7 +12,6 @@ import { CustomTableComponent } from '../custom-table/custom-table.component';
 
 export class BacktestComponent implements OnInit{
   show: boolean = false;
-  showTable: boolean = false;
   backtests: [] =[];
  
   stocks=[
@@ -52,7 +51,6 @@ export class BacktestComponent implements OnInit{
   getAllBacktests() {
     this.stockService.getAllBacktests().subscribe((response:any)=>{
       this.backtests =  response;
-     
     })
   }
 
