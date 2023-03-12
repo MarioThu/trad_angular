@@ -1,49 +1,72 @@
-<div class="input">
+<div>
+
+ <button type="button" (click) = addBacktest()>
+    <mat-icon style="color:black;">add</mat-icon>
+    Start Backtest
+</button>
+<button type="button" (click) = openBacktestTable()>
+    <mat-icon style="color:black;">search</mat-icon>
+    Select Backtest
+</button>
+<button type="button" (click) = selectScript()>
+    <mat-icon style="color:black;">search</mat-icon>
+    Select Script
+</button>
+<button type="button" (click) = selectAsset()>
+    <mat-icon style="color:black;">search</mat-icon>
+    Select Asset
+</button>
+
+<div class="input " *ngIf="show">
     <div class="select_label">
         <label >Script</label>
-        <mat-select class="select">
-            <mat-option>
-    
+        <mat-select class="select"  name="script" value="script" #script>
+            <mat-option value="test">
+                
             </mat-option>
         </mat-select >
     </div>
     <div class="select_label">
     <label>Market</label>
-    <mat-select class="select">
-        <mat-option>
+    <mat-select class="select"  name="market" value="market" #market>
+        <mat-option value="test">
 
         </mat-option>
     </mat-select >
     </div>
     <div class="select_label">
     <label>Stocks/Coin</label>
-    <mat-select color="black" class="select">
+    <mat-select color="black" class="select" name="stock" value="stock" #stock>
         <mat-option  *ngFor="let stock of stocks"  value={{stock}}>{{stock}}</mat-option>
     </mat-select >
     </div>
     <div class="select_label">
     <label>Start</label>
-    <mat-select class="select">
-        <mat-option>
+    <mat-select class="select"  name="start" value="start" #start>
+        <mat-option value="test">
 
         </mat-option>
     </mat-select>
 </div>
 <div class="select_label">
     <label>End</label>
-    <mat-select class="select">
-        <mat-option>
+    <mat-select class="select"  name="end" value="end" #end>
+        <mat-option value="test">
 
         </mat-option>
     </mat-select>
 </div>
 <div class="select_label">
     <label>Timeframe</label>
-    <mat-select class="select">
-        <mat-option>
+    <mat-select class="select"  name="timeframe" value="timeframe" #timeframe>
+        <mat-option value="test" >
 
         </mat-option>
     </mat-select>
     
 </div>
-<input type="button" value="clickButton" mat-button name="startButton" (click)="startBacktest()">
+<input type="button" value="clickButton" mat-button name="startButton" (click)="startBacktest(script.value,stock.value,start.value,end.value,timeframe.value)">
+</div>
+<app-dashboard>
+
+</app-dashboard>

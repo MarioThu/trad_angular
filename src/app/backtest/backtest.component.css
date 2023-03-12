@@ -7,6 +7,23 @@
 ng::deep mat-select{
     color:black !important;
 }
+.left-part{
+    
+    background-color: aliceblue;
+    min-height:90%;
+}
+.mat-mdc-table{
+    min-width: 50% !important;
+    max-width: 20%;
+    overflow: auto;
+    margin:5px;
+}
+.mat-mdc-header-row{
+   min-height:15% !important;
+}
+mat-row {
+    min-height:25px !important;
+}
 .input{
     width:20%;
     padding:1%;
@@ -14,6 +31,14 @@ ng::deep mat-select{
     background-color: #3f51b5;
     height: 50%;
     
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    width:30em;
+    height:30em;
+    margin-top: -15em; /*set to a negative number 1/2 of your height*/
+    margin-left: -15em; /*set to a negative number 1/2 of your width*/
+    border: 1px solid #ccc;
 }
 ::ng-deep label{
     padding:10px;

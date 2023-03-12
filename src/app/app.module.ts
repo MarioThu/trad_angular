@@ -38,13 +38,17 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { BacktestComponent } from './backtest/backtest.component';
 import { StockTickerService } from './stock-ticker.service';
 import { HttpClientModule } from '@angular/common/http';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { CustomTableComponent } from './custom-table/custom-table.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     NavComponent,
-    BacktestComponent
+    BacktestComponent,
+    DashboardComponent,
+    CustomTableComponent
   ],
   imports: [
     HttpClientModule,
@@ -83,7 +87,6 @@ import { HttpClientModule } from '@angular/common/http';
     MatPaginatorModule,
     LayoutModule
   ],
-  providers: [StockTickerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
