@@ -1,4 +1,5 @@
 import { Component ,Input, OnInit} from '@angular/core';
+import { ColDef } from 'ag-grid-community';
 
 @Component({
   selector: 'app-custom-table',
@@ -7,13 +8,13 @@ import { Component ,Input, OnInit} from '@angular/core';
 })
 export class CustomTableComponent implements OnInit{
     @Input() dataSource=[{"default":"default"}];
-    columnDefs: string[];
+    columnDefs: ColDef[];
     constructor(){
 
     }
 
     ngOnInit(){
-      this.columnDefs = Object.keys(this.dataSource[0])
+      this.columnDefs = <ColDef[]> Object.keys(this.dataSource[0])
     }
     
 }
