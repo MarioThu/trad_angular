@@ -1,16 +1,19 @@
-import { Component ,Input} from '@angular/core';
+import { Component ,Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-custom-table',
   templateUrl: './custom-table.component.html',
   styleUrls: ['./custom-table.component.css']
 })
-export class CustomTableComponent {
-    @Input() dataSource:[];
-    
+export class CustomTableComponent implements OnInit{
+    @Input() dataSource=[{"default":"default"}];
+    columnDefs: string[];
     constructor(){
 
     }
 
+    ngOnInit(){
+      this.columnDefs = Object.keys(this.dataSource[0])
+    }
     
 }
