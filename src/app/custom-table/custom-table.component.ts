@@ -14,6 +14,7 @@ export class CustomTableComponent implements OnInit{
     }
 
     ngOnInit(){
+      console.log(this.dataSource)
       this.columnDefs = <ColDef[]> Object.keys(this.dataSource[0])
     }
     
