@@ -51,6 +51,7 @@ export class BacktestComponent implements OnInit{
   getAllBacktests() {
     this.stockService.getAllBacktests().subscribe((response:any)=>{
       this.backtests =  response;
+      console.log(this.backtests);
     })
   }
 
@@ -71,4 +72,5 @@ export interface BacktestOutput{
   timeframe?:any
   gain?:any
   winRate?:any
+  status?:any
 }

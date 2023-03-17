@@ -14,6 +14,6 @@ export class StockTickerService {
     return this.httpclient.post("http://18.192.214.203:5000/startBacktest",backtest)
   }
   public getAllBacktests():Observable<object>{
-    return this.httpclient.get("http://18.192.214.203:5000/allBacktests")
+    return this.httpclient.get("http://18.192.214.203:5000/allBacktest")
   }
 }
