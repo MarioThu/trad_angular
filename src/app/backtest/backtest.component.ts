@@ -53,6 +53,7 @@ export class BacktestComponent implements OnInit{
       this.dataSource =  response;
       console.log(this.dataSource);
     })
+    return this.dataSource
   }
 
 }

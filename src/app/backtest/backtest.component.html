@@ -4,7 +4,7 @@
     <mat-icon style="color:black;">add</mat-icon>
     Start Backtest
 </button>
-<button type="button" (click) = openBacktestTable()>
+<button type="button" (click) = table.setDataSource(getAllbacktest())>
     <mat-icon style="color:black;">search</mat-icon>
     Select Backtest
 </button>
@@ -67,6 +67,6 @@
 </div>
 <input type="button" value="clickButton" mat-button name="startButton" (click)="startBacktest(script.value,stock.value,start.value,end.value,timeframe.value)">
 </div>
-<app-custom-table>
+<app-custom-table #table >
     
 </app-custom-table>
