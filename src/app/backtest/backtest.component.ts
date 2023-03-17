@@ -13,7 +13,7 @@ import { CustomTableComponent } from '../custom-table/custom-table.component';
 export class BacktestComponent implements OnInit{
   show: boolean = false;
   backtests: [] =[];
- 
+  dataSource:[]=[]
   stocks=[
     "AAPL",
     "AMZN",
@@ -50,8 +50,8 @@ export class BacktestComponent implements OnInit{
   }
   getAllBacktests() {
     this.stockService.getAllBacktests().subscribe((response:any)=>{
-      this.backtests =  response;
-      console.log(this.backtests);
+      this.dataSource =  response;
+      console.log(this.dataSource);
     })
   }
 
