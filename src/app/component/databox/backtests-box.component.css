@@ -1,0 +1,25 @@
+.select{
+    background-color: rgb(255, 255, 255);
+    max-width: 50%;   
+    border-radius: 5px;
+}
+
+.input{
+    display: flex;
+    padding:1%;
+    margin:1%;
+    background-color: #3f51b5;
+    max-width:50%;
+
+}
+.input_part{
+    flex:2;
+    display:block;
+    margin:5px;
+}
+.select_label{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    
+}

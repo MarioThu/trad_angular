@@ -1,0 +1,68 @@
+<div style="display: flex;flex-direction:column;">
+    <div style="flex:1;">
+        
+        <div style="background-color: #3f51b5; display: flex;">
+            <div class="startBacktest" style="flex:1 "><p>Start Backtest</p>
+            <div class="input">
+            
+                <div class="input_part">
+                    <div class="select_label">
+                        <label >Script</label>
+                        <mat-select class="select"  name="script" value="script" #script>
+                            <mat-option value="test">
+                                
+                            </mat-option>
+                        </mat-select >
+                    </div>
+                    <div class="select_label">
+                    <label>Market</label>
+                    <mat-select class="select"  name="market" value="market" #market>
+                        <mat-option value="test">
+                
+                        </mat-option>
+                    </mat-select >
+                    </div>
+                    <div class="select_label">
+                    <label>Stocks/Coin</label>
+                    <mat-select color="black" class="select" name="stock" value="stock" #stock>
+                        <mat-option value=stock></mat-option>
+                    </mat-select >
+                    </div>
+                </div>
+               <div class="input_part">
+                        <div class="select_label">
+                        <label>Start</label>
+                        <mat-select class="select"  name="start" value="start" #start>
+                            <mat-option value="test">
+                    
+                            </mat-option>
+                        </mat-select>
+                    </div>
+                    <div class="select_label">
+                        <label>End</label>
+                        <mat-select class="select"  name="end" value="end" #end>
+                            <mat-option value="test">
+                    
+                            </mat-option>
+                        </mat-select>
+                    </div>
+                    <div class="select_label">
+                        <label>Timeframe</label>
+                        <mat-select class="select"  name="timeframe" value="timeframe" #timeframe>
+                            <mat-option value="test" >
+                    
+                            </mat-option>
+                        </mat-select>
+                    </div>   
+           </div>
+           <input type="button" value="clickButton" mat-button name="startButton" (click)="startBacktest(script.value,stock.value,start.value,end.value,timeframe.value)">
+           </div>
+        </div>
+        </div>
+    
+
+
+    <div style="flex:4;">
+
+    </div>
+</div>

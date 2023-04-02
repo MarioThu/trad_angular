@@ -7,18 +7,24 @@ import { ColDef } from 'ag-grid-community';
   styleUrls: ['./custom-table.component.css']
 })
 export class CustomTableComponent implements OnInit{
-    dataSource=[{"default":"default"}];
-    columnDefs: ColDef[];
+    dataSource=[];
+    columnDefs=[
+      {}
+    ];
     constructor(){
 
     }
 
-    ngOnInit(){
-      console.log(this.dataSource)
-      this.columnDefs = <ColDef[]> Object.keys(this.dataSource[0])
-      console.log(this.columnDefs);
-    }
-    setdataSource(data:any){
+   ngOnInit(): void {
+   }
+    
+  setdataSource(data:any){
       this.dataSource=data;
-    }
+      console.log("hä")
+      console.log("dataSource"+this.dataSource)
+      
+      const keys =  Object.keys(this.dataSource[0])
+      keys.forEach(key=>this.columnDefs.push({field:key}));
+      console.log(this.columnDefs);
+  }
 }

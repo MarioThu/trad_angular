@@ -1,0 +1,60 @@
+<div class="flexbox">
+    <div class="watchbox">
+        <div style="margin-bottom: 5px;display: flex;">
+            <button mat-raised-button color="primary" style="color:black;margin-right: 5px;">Watchlists</button>
+            <button mat-raised-button color="primary" style="color:black;margin-right: 5px;" (click) = getAllBacktests()>Backtests</button>
+            <button mat-raised-button color="primary" style="color:black;margin-right: 5px;">Stocks</button>
+            <button mat-raised-button color="primary" style="color:black;margin-right: 5px;" (click) = getScriptData()>Script</button>
+        </div>
+        <div style="display:flex;padding:5px;background-color:black;justify-content: flex-start;">
+            <button mat-icon-button style="margin:5px">
+                <mat-icon aria-label="plus" color="primary">add</mat-icon>
+            </button>
+            <button mat-icon-button color="white" style="margin:5px" >
+                <mat-icon aria-label="minus" color="black">delete</mat-icon>
+            </button>
+        </div>
+        <ag-grid-angular
+            style="width: 100%; height: 700px;"
+            class="ag-theme-alpine"
+            [defaultColDef]="defaultColDef" 
+            [rowData]="dataSource"
+            [columnDefs]="columnDefs"
+            (gridReady)="onGridReady($event)">
+        </ag-grid-angular>
+  
+    </div>
+    <div class="databox">   
+       <!--
+
+       <div style="background-color:aqua ; display:flex; flex:1;">
+        <div style="flex:1;margin:5px;background-color: black; padding:5px;">
+                <p>
+                    Top Watchlists
+                </p>
+                <ag-grid-angular style="width: auto; height: 11em;"
+                class="ag-theme-alpine" [rowData]="watchData" [columnDefs]="watchDef"></ag-grid-angular>
+            </div>
+            <div style="flex:1;margin:5px;background-color: black; padding:5px;">
+                <p>
+                    Top Backtests
+                </p>
+                <ag-grid-angular  style="width: auto; height: 11em;"
+                class="ag-theme-alpine" [columnDefs]="backDef"></ag-grid-angular>
+            </div>
+            <div style="flex:1;margin:5px;background-color: black; padding:5px;">
+                <p>
+                    Top Stocks
+                </p>
+                <ag-grid-angular  style="width: auto; height: 11em;"
+                class="ag-theme-alpine" [columnDefs]="stockDef" ></ag-grid-angular>
+            </div>
+          
+
+        </div>
+        -->
+        <div style="flex: 5;">
+            <app-databox [boxType]="boxType"></app-databox>
+        </div>
+    </div>
+</div>

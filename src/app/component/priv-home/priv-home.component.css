@@ -1,0 +1,21 @@
+.flexbox{
+    display:flex;
+    width:auto;
+}
+button:hover{
+    background-color: white;
+}
+.watchbox{
+    background-color: white;
+    padding: 5px;
+    display: flex;
+    flex:3;
+    flex-direction: column;
+    
+}
+.databox{
+    display: flex;
+    flex-direction: column;
+
+    flex: 5;
+}

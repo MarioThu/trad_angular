@@ -4,7 +4,7 @@
     <mat-icon style="color:black;">add</mat-icon>
     Start Backtest
 </button>
-<button type="button" (click) = table.setdataSource(getAllBacktests())>
+<button type="button" (click) =  setdataSourceBacktest()>
     <mat-icon style="color:black;">search</mat-icon>
     Select Backtest
 </button>
@@ -16,7 +16,13 @@
     <mat-icon style="color:black;">search</mat-icon>
     Select Asset
 </button>
-
+<ag-grid-angular
+    style="width: 40%; height: 700px;"
+    class="ag-theme-alpine"
+    [defaultColDef]="defaultColDef"
+    [rowData]="dataSource"
+    [columnDefs]="columnDefs">
+</ag-grid-angular>
 <div class="input " *ngIf="show">
     <div class="select_label">
         <label >Script</label>
@@ -67,6 +73,3 @@
 </div>
 <input type="button" value="clickButton" mat-button name="startButton" (click)="startBacktest(script.value,stock.value,start.value,end.value,timeframe.value)">
 </div>
-<app-custom-table #table >
-    
-</app-custom-table>
